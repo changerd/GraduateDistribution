@@ -16,7 +16,7 @@ namespace GraduateDistribution.Entities
         public string GraduateGender { get; set; }
         public string GraduateAdress { get; set; }
         public string GraduateTelephone { get; set; }
-        public string GroupId { get; set; }
+        public int GroupId { get; set; }
         public Group Group { get; set; }
         public virtual ICollection<Distribution> Distributions { get; set; }
         public Graduate()

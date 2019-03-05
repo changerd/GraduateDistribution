@@ -8,8 +8,7 @@ namespace GraduateDistribution.Entities
 {
     public class Group
     {
-        public int GroupId { get; set; }
-        public string GroupName { get; set; }
+        public int GroupId { get; set; }        
         public int GroupQuantity { get; set; }
         public int GroupEndStudy { get; set; }
         public int SpecialtyId { get; set; }

@@ -10,6 +10,7 @@ namespace GraduateDistribution.Entities
     {
         public int SpecialtyId { get; set; }
         public string SpecialtyCode { get; set; }
+        public string SpecialtyName { get; set; }
         public string SpecialtyTime { get; set; }
         public string SpecialtyFormStudy { get; set; }
         public virtual ICollection<Group> Groups { get; set; }
