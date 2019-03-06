@@ -10,9 +10,9 @@ namespace GraduateDistribution.Entities
     {
         public int GraduateId { get; set; }
         public string GraduateSurName { get; set; }
-        public string GraduateLastName { get; set; }
+        public string GraduateFirstName { get; set; }
         public string GraduateSecondName { get; set; }
-        public string GraduateBirthDate { get; set; }
+        public DateTime GraduateBirthDate { get; set; }
         public string GraduateGender { get; set; }
         public string GraduateAdress { get; set; }
         public string GraduateTelephone { get; set; }

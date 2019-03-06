@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace GraduateDistribution.Entities
 {
-    public class ApplicationContext : DbContext
+    public class ApplicationDbContext : DbContext
     {
-        public ApplicationContext() : base ("ApplicationContext") {}
+        public ApplicationDbContext() : base ("ApplicationDbContext") {}
 
         public DbSet<Distribution> Distributions { get; set; }
         public DbSet<Graduate> Graduates { get; set; }

@@ -72,6 +72,7 @@
             // 
             // metroTextBoxSpecialtyCode
             // 
+            this.metroTextBoxSpecialtyCode.BackColor = System.Drawing.Color.White;
             this.metroTextBoxSpecialtyCode.Location = new System.Drawing.Point(178, 63);
             this.metroTextBoxSpecialtyCode.Name = "metroTextBoxSpecialtyCode";
             this.metroTextBoxSpecialtyCode.Size = new System.Drawing.Size(129, 23);
@@ -88,6 +89,9 @@
             // 
             this.metroComboBoxFormStudy.FormattingEnabled = true;
             this.metroComboBoxFormStudy.ItemHeight = 23;
+            this.metroComboBoxFormStudy.Items.AddRange(new object[] {
+            "Дневная",
+            "Заочная"});
             this.metroComboBoxFormStudy.Location = new System.Drawing.Point(178, 171);
             this.metroComboBoxFormStudy.Name = "metroComboBoxFormStudy";
             this.metroComboBoxFormStudy.Size = new System.Drawing.Size(129, 29);
@@ -95,23 +99,27 @@
             // 
             // metroTileSpicialtyAdd
             // 
-            this.metroTileSpicialtyAdd.Location = new System.Drawing.Point(87, 216);
+            this.metroTileSpicialtyAdd.Location = new System.Drawing.Point(137, 234);
             this.metroTileSpicialtyAdd.Name = "metroTileSpicialtyAdd";
             this.metroTileSpicialtyAdd.Size = new System.Drawing.Size(75, 23);
             this.metroTileSpicialtyAdd.Style = MetroFramework.MetroColorStyle.Black;
             this.metroTileSpicialtyAdd.TabIndex = 6;
             this.metroTileSpicialtyAdd.Text = "Добавить";
             this.metroTileSpicialtyAdd.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileSpicialtyAdd.Visible = false;
+            this.metroTileSpicialtyAdd.Click += new System.EventHandler(this.metroTileSpicialtyAdd_Click);
             // 
             // metroTileSpecialtyEdit
             // 
-            this.metroTileSpecialtyEdit.Location = new System.Drawing.Point(111, 245);
+            this.metroTileSpecialtyEdit.Location = new System.Drawing.Point(118, 234);
             this.metroTileSpecialtyEdit.Name = "metroTileSpecialtyEdit";
             this.metroTileSpecialtyEdit.Size = new System.Drawing.Size(107, 23);
             this.metroTileSpecialtyEdit.Style = MetroFramework.MetroColorStyle.Black;
             this.metroTileSpecialtyEdit.TabIndex = 7;
             this.metroTileSpecialtyEdit.Text = "Редактировать";
             this.metroTileSpecialtyEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileSpecialtyEdit.Visible = false;
+            this.metroTileSpecialtyEdit.Click += new System.EventHandler(this.metroTileSpecialtyEdit_Click);
             // 
             // metroTextBoxSpecialtyName
             // 
@@ -145,9 +153,13 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(330, 295);
+            this.MinimumSize = new System.Drawing.Size(330, 295);
             this.Name = "SpecialtyEntityForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "SpecialtyEntityForm";
+            this.Load += new System.EventHandler(this.SpecialtyEntityForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

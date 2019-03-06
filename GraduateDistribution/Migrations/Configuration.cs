@@ -5,14 +5,14 @@ namespace GraduateDistribution.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<GraduateDistribution.Entities.ApplicationContext>
+    internal sealed class Configuration : DbMigrationsConfiguration<GraduateDistribution.Entities.ApplicationDbContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(GraduateDistribution.Entities.ApplicationContext context)
+        protected override void Seed(GraduateDistribution.Entities.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
 
