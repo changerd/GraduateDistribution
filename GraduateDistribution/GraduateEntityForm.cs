@@ -45,12 +45,19 @@ namespace GraduateDistribution
                 metroComboBoxGroup.ValueMember = "Id";
             }
         }
-
         private void GraduateEntityForm_Load(object sender, EventArgs e)
         {
             GetSpecialty();
             metroTileGraduateAdd.Visible = btnAddvisible;
             metroTileGraduateEdit.Visible = btnEditvisible;
+            metroTextBoxSurName.Text = gsname;
+            metroTextBoxFirstName.Text = gfname;
+            metroTextBoxSecondName.Text = gsecname;
+            metroComboBoxGender.Text = gsecname;
+            metroComboBoxGender.Text = ggender;
+            metroTextBoxAdress.Text = gadress;
+            maskedTextBoxTelephone.Text = gtel;
+            dateTimePickerBirth.Value = gbirth;
         }
         private void metroTileGraduateAdd_Click(object sender, EventArgs e)
         {
@@ -91,7 +98,37 @@ namespace GraduateDistribution
     
         private void metroTileGraduateEdit_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (String.IsNullOrEmpty(metroTextBoxSurName.Text) ||
+                    String.IsNullOrEmpty(metroTextBoxFirstName.Text) ||
+                    String.IsNullOrEmpty(metroTextBoxSecondName.Text) ||
+                    dateTimePickerBirth == null ||
+                    String.IsNullOrEmpty(metroComboBoxGender.Text) ||
+                    String.IsNullOrEmpty(metroTextBoxAdress.Text) ||
+                    String.IsNullOrEmpty(maskedTextBoxTelephone.Text))
+                    throw new Exception("Поля не должны быть пустыми!");
+                using (ApplicationDbContext context = new ApplicationDbContext())
+                {
+                    var graduate = context.Graduates.Find(GraduateId);
+                    graduate.GraduateSurName = metroTextBoxSurName.Text;
+                    graduate.GraduateFirstName = metroTextBoxFirstName.Text;
+                    graduate.GraduateSecondName = metroTextBoxSecondName.Text;
+                    graduate.GraduateBirthDate = dateTimePickerBirth.Value;
+                    graduate.GraduateAdress = metroTextBoxAdress.Text;
+                    graduate.GraduateGender = metroComboBoxGender.Text;
+                    graduate.GraduateTelephone = maskedTextBoxTelephone.Text;
+                    graduate.GroupId = Convert.ToInt32(metroComboBoxGroup.SelectedValue);
+                    context.Entry(graduate).State = EntityState.Modified;
+                    context.SaveChanges();
+                }
+                MessageBox.Show("Запись успешно изменена!", "GraduateDistribution");
+                this.Close();
+            }
+            catch (Exception gg)
+            {
+                MessageBox.Show(gg.Message, "Ошибка");
+            }
         }        
     }
 }

@@ -241,6 +241,9 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(317, 373);
+            this.MinimumSize = new System.Drawing.Size(317, 373);
             this.Name = "GraduateEntityForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "GraduateEntityForm";

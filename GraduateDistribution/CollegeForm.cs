@@ -181,12 +181,47 @@ namespace GraduateDistribution
 
         private void metroButtonGraduateEdit_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                int gid = Convert.ToInt32(dataGridViewGraduate.SelectedCells[0].Value.ToString());
+                var graduate = db.Graduates.Find(gid);
+                GraduateEntityForm form = new GraduateEntityForm();
+                form.Text = "Изменение выпускника";
+                form.btnEditvisible = true;
+                form.GraduateId = graduate.GraduateId;
+                form.gsname = graduate.GraduateSurName;
+                form.gfname = graduate.GraduateFirstName;
+                form.gsecname = graduate.GraduateSecondName;
+                form.gadress = graduate.GraduateAdress;
+                form.gtel = graduate.GraduateTelephone;
+                form.ggender = graduate.GraduateGender;
+                form.gbirth = graduate.GraduateBirthDate;
+                form.Show();
+            }
+            catch (Exception gg)
+            {
+                MessageBox.Show(gg.Message, "Ошибка");
+            }
         }
 
         private void metroButtonGraduateDelete_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                int gid = Convert.ToInt32(dataGridViewGraduate.SelectedCells[0].Value.ToString());
+                var graduate = db.Graduates.Find(gid);
+                DialogResult dialogResult = MessageBox.Show("Вы точно хотите удалить выпускника?", "GraduateDistribution", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    db.Graduates.Remove(graduate);
+                    db.SaveChanges();
+                }
+                CollegeForm_Load(sender, e);
+            }
+            catch (Exception gg)
+            {
+                MessageBox.Show(gg.Message, "Ошибка");
+            }
         }
         private void metroButtonGroupAdd_Click(object sender, EventArgs e)
         {
@@ -287,6 +322,50 @@ namespace GraduateDistribution
             }
         }
 
-        
+        private void metroTextBoxGraduateSearch_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                CurrencyManager cManager = dataGridViewGraduate.BindingContext[dataGridViewGraduate.DataSource, dataGridViewGraduate.DataMember] as CurrencyManager;
+                cManager.SuspendBinding();
+                cManager.ResumeBinding();
+                for (int i = 0; i < dataGridViewGraduate.RowCount; i++)
+                {
+                    dataGridViewGraduate.Rows[i].Selected = false;
+                }
+                if (metroTextBoxGraduateSearch.Text == "")
+                    for (int i = 0; i < dataGridViewGraduate.RowCount; i++)
+                    {
+                        dataGridViewGraduate.Rows[i].Selected = false;
+                        dataGridViewGraduate.Rows[i].Visible = true;
+                    }
+                else
+                {
+                    for (int i = 0; i < dataGridViewGraduate.RowCount; i++)
+                    {
+                        dataGridViewGraduate.Rows[i].Selected = false;
+                        for (int j = 0; j < dataGridViewGraduate.ColumnCount; j++)
+                            if (dataGridViewGraduate.Rows[i].Cells[j].Value != null)
+
+                                if (dataGridViewGraduate.Rows[i].Cells[j].Value.ToString().Contains(metroTextBoxGraduateSearch.Text))
+                                {
+                                    dataGridViewGraduate.Rows[i].Selected = true;
+                                    dataGridViewGraduate.Rows[i].Visible = true;
+                                    break;
+                                }
+                                else
+                                {
+                                    dataGridViewGraduate.Rows[i].Selected = false;
+                                    dataGridViewGraduate.Rows[i].Visible = false;
+                                }
+                    }
+                }
+            }
+
+            catch
+            {
+                MessageBox.Show("При поиске произошла ошибка, для исправления выберите другую строку");
+            }
+        }
     }
 }

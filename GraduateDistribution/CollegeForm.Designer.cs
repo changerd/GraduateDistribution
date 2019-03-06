@@ -30,6 +30,7 @@
         {
             this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
             this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroTextBoxGraduateSearch = new MetroFramework.Controls.MetroTextBox();
             this.metroButtonGraduateDelete = new MetroFramework.Controls.MetroButton();
             this.metroButtonGraduateEdit = new MetroFramework.Controls.MetroButton();
@@ -45,7 +46,6 @@
             this.metroButtonSpecialtyEdit = new MetroFramework.Controls.MetroButton();
             this.metroButtonSpecialtyAdd = new MetroFramework.Controls.MetroButton();
             this.dataGridViewSpecialty = new System.Windows.Forms.DataGridView();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGraduate)).BeginInit();
@@ -84,6 +84,16 @@
             this.metroTabPage1.Text = "Выпускники";
             this.metroTabPage1.VerticalScrollbarBarColor = true;
             // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(376, 1);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(65, 25);
+            this.metroLabel1.TabIndex = 12;
+            this.metroLabel1.Text = "Поиск:";
+            // 
             // metroTextBoxGraduateSearch
             // 
             this.metroTextBoxGraduateSearch.BackColor = System.Drawing.Color.White;
@@ -91,6 +101,7 @@
             this.metroTextBoxGraduateSearch.Name = "metroTextBoxGraduateSearch";
             this.metroTextBoxGraduateSearch.Size = new System.Drawing.Size(296, 23);
             this.metroTextBoxGraduateSearch.TabIndex = 10;
+            this.metroTextBoxGraduateSearch.TextChanged += new System.EventHandler(this.metroTextBoxGraduateSearch_TextChanged);
             // 
             // metroButtonGraduateDelete
             // 
@@ -231,16 +242,6 @@
             this.dataGridViewSpecialty.Name = "dataGridViewSpecialty";
             this.dataGridViewSpecialty.Size = new System.Drawing.Size(740, 280);
             this.dataGridViewSpecialty.TabIndex = 2;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(376, 1);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(65, 25);
-            this.metroLabel1.TabIndex = 12;
-            this.metroLabel1.Text = "Поиск:";
             // 
             // CollegeForm
             // 
