@@ -18,7 +18,7 @@ namespace GraduateDistribution
         public bool btnAddvisible = false;
         public bool btnEditvisible = false;
         public int SpecialtyId;
-        public string scode, sname, stime;
+        public string scode, sname, stime, sform;
         public SpecialtyEntityForm()
         {
             InitializeComponent();            
@@ -30,6 +30,7 @@ namespace GraduateDistribution
             metroTextBoxSpecialtyName.Text = sname;
             metroTextBoxSpecialtyCode.Text = scode;
             metroTextBoxSpecialtyTime.Text = stime;
+            metroComboBoxFormStudy.Text = sform;
         }
 
         private void metroTileSpicialtyAdd_Click(object sender, EventArgs e)

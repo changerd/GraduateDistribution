@@ -16,8 +16,8 @@ namespace GraduateDistribution
     public partial class GroupEntityForm : MetroForm
     {
         public bool btnAddvisible = false;
-        public bool btnEditvisible = false;
-        public int GroupId;
+        public bool btnEditvisible = false;        
+        public int GroupId;        
         public int gquantity, gendstudy;
 
         public GroupEntityForm()
@@ -40,7 +40,7 @@ namespace GraduateDistribution
             metroTileGroupAdd.Visible = btnAddvisible;
             metroTileGroupEdit.Visible = btnEditvisible;
             metroTextBoxGroupQuantity.Text = gquantity.ToString();
-            metroTextBoxEndStudy.Text = gendstudy.ToString();
+            metroTextBoxEndStudy.Text = gendstudy.ToString();            
         }
 
         private void metroTileGroupAdd_Click(object sender, EventArgs e)

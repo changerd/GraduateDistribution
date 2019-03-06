@@ -241,7 +241,7 @@ namespace GraduateDistribution
                 form.btnEditvisible = true;
                 form.GroupId = group.GroupId;
                 form.gquantity = group.GroupQuantity;
-                form.gendstudy = group.GroupEndStudy;
+                form.gendstudy = group.GroupEndStudy;                
                 form.Show();
             }
             catch (Exception gg)
@@ -292,6 +292,7 @@ namespace GraduateDistribution
                 form.sname = specialty.SpecialtyName;
                 form.scode = specialty.SpecialtyCode;
                 form.stime = specialty.SpecialtyTime;
+                form.sform = specialty.SpecialtyFormStudy;
                 form.Show();
             }
             catch (Exception gg)
@@ -366,6 +367,11 @@ namespace GraduateDistribution
             {
                 MessageBox.Show("При поиске произошла ошибка, для исправления выберите другую строку");
             }
+        }
+
+        private void metroTileRefresh_Click(object sender, EventArgs e)
+        {
+            metroTabControl1_SelectedIndexChanged(sender, e);
         }
     }
 }

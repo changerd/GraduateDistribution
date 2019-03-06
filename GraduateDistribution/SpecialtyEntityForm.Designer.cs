@@ -75,14 +75,14 @@
             this.metroTextBoxSpecialtyCode.BackColor = System.Drawing.Color.White;
             this.metroTextBoxSpecialtyCode.Location = new System.Drawing.Point(178, 63);
             this.metroTextBoxSpecialtyCode.Name = "metroTextBoxSpecialtyCode";
-            this.metroTextBoxSpecialtyCode.Size = new System.Drawing.Size(129, 23);
+            this.metroTextBoxSpecialtyCode.Size = new System.Drawing.Size(196, 23);
             this.metroTextBoxSpecialtyCode.TabIndex = 3;
             // 
             // metroTextBoxSpecialtyTime
             // 
             this.metroTextBoxSpecialtyTime.Location = new System.Drawing.Point(178, 138);
             this.metroTextBoxSpecialtyTime.Name = "metroTextBoxSpecialtyTime";
-            this.metroTextBoxSpecialtyTime.Size = new System.Drawing.Size(129, 23);
+            this.metroTextBoxSpecialtyTime.Size = new System.Drawing.Size(196, 23);
             this.metroTextBoxSpecialtyTime.TabIndex = 4;
             // 
             // metroComboBoxFormStudy
@@ -94,12 +94,12 @@
             "Заочная"});
             this.metroComboBoxFormStudy.Location = new System.Drawing.Point(178, 171);
             this.metroComboBoxFormStudy.Name = "metroComboBoxFormStudy";
-            this.metroComboBoxFormStudy.Size = new System.Drawing.Size(129, 29);
+            this.metroComboBoxFormStudy.Size = new System.Drawing.Size(196, 29);
             this.metroComboBoxFormStudy.TabIndex = 5;
             // 
             // metroTileSpicialtyAdd
             // 
-            this.metroTileSpicialtyAdd.Location = new System.Drawing.Point(137, 234);
+            this.metroTileSpicialtyAdd.Location = new System.Drawing.Point(165, 234);
             this.metroTileSpicialtyAdd.Name = "metroTileSpicialtyAdd";
             this.metroTileSpicialtyAdd.Size = new System.Drawing.Size(75, 23);
             this.metroTileSpicialtyAdd.Style = MetroFramework.MetroColorStyle.Black;
@@ -111,7 +111,7 @@
             // 
             // metroTileSpecialtyEdit
             // 
-            this.metroTileSpecialtyEdit.Location = new System.Drawing.Point(118, 234);
+            this.metroTileSpecialtyEdit.Location = new System.Drawing.Point(146, 234);
             this.metroTileSpecialtyEdit.Name = "metroTileSpecialtyEdit";
             this.metroTileSpecialtyEdit.Size = new System.Drawing.Size(107, 23);
             this.metroTileSpecialtyEdit.Style = MetroFramework.MetroColorStyle.Black;
@@ -125,7 +125,7 @@
             // 
             this.metroTextBoxSpecialtyName.Location = new System.Drawing.Point(178, 101);
             this.metroTextBoxSpecialtyName.Name = "metroTextBoxSpecialtyName";
-            this.metroTextBoxSpecialtyName.Size = new System.Drawing.Size(129, 23);
+            this.metroTextBoxSpecialtyName.Size = new System.Drawing.Size(196, 23);
             this.metroTextBoxSpecialtyName.TabIndex = 9;
             // 
             // metroLabel4
@@ -142,7 +142,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(330, 295);
+            this.ClientSize = new System.Drawing.Size(397, 295);
             this.Controls.Add(this.metroTextBoxSpecialtyName);
             this.Controls.Add(this.metroLabel4);
             this.Controls.Add(this.metroTileSpecialtyEdit);
@@ -154,8 +154,8 @@
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(330, 295);
-            this.MinimumSize = new System.Drawing.Size(330, 295);
+            this.MaximumSize = new System.Drawing.Size(397, 295);
+            this.MinimumSize = new System.Drawing.Size(397, 295);
             this.Name = "SpecialtyEntityForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "SpecialtyEntityForm";

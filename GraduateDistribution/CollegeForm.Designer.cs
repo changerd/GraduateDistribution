@@ -46,6 +46,7 @@
             this.metroButtonSpecialtyEdit = new MetroFramework.Controls.MetroButton();
             this.metroButtonSpecialtyAdd = new MetroFramework.Controls.MetroButton();
             this.dataGridViewSpecialty = new System.Windows.Forms.DataGridView();
+            this.metroTileRefresh = new MetroFramework.Controls.MetroTile();
             this.metroTabControl1.SuspendLayout();
             this.metroTabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewGraduate)).BeginInit();
@@ -62,7 +63,7 @@
             this.metroTabControl1.Controls.Add(this.metroTabPage3);
             this.metroTabControl1.Location = new System.Drawing.Point(23, 63);
             this.metroTabControl1.Name = "metroTabControl1";
-            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.SelectedIndex = 1;
             this.metroTabControl1.Size = new System.Drawing.Size(754, 364);
             this.metroTabControl1.Style = MetroFramework.MetroColorStyle.Black;
             this.metroTabControl1.TabIndex = 0;
@@ -105,7 +106,7 @@
             // 
             // metroButtonGraduateDelete
             // 
-            this.metroButtonGraduateDelete.Location = new System.Drawing.Point(504, 289);
+            this.metroButtonGraduateDelete.Location = new System.Drawing.Point(507, 289);
             this.metroButtonGraduateDelete.Name = "metroButtonGraduateDelete";
             this.metroButtonGraduateDelete.Size = new System.Drawing.Size(239, 33);
             this.metroButtonGraduateDelete.TabIndex = 9;
@@ -116,7 +117,7 @@
             // 
             this.metroButtonGraduateEdit.Location = new System.Drawing.Point(248, 289);
             this.metroButtonGraduateEdit.Name = "metroButtonGraduateEdit";
-            this.metroButtonGraduateEdit.Size = new System.Drawing.Size(250, 33);
+            this.metroButtonGraduateEdit.Size = new System.Drawing.Size(253, 33);
             this.metroButtonGraduateEdit.TabIndex = 8;
             this.metroButtonGraduateEdit.Text = "Редактировать";
             this.metroButtonGraduateEdit.Click += new System.EventHandler(this.metroButtonGraduateEdit_Click);
@@ -135,9 +136,9 @@
             this.dataGridViewGraduate.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewGraduate.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGraduate.GridColor = System.Drawing.Color.White;
-            this.dataGridViewGraduate.Location = new System.Drawing.Point(3, 29);
+            this.dataGridViewGraduate.Location = new System.Drawing.Point(0, 29);
             this.dataGridViewGraduate.Name = "dataGridViewGraduate";
-            this.dataGridViewGraduate.Size = new System.Drawing.Size(740, 254);
+            this.dataGridViewGraduate.Size = new System.Drawing.Size(746, 254);
             this.dataGridViewGraduate.TabIndex = 6;
             // 
             // metroTabPage2
@@ -156,7 +157,7 @@
             // 
             // metroButtonGroupDelete
             // 
-            this.metroButtonGroupDelete.Location = new System.Drawing.Point(504, 289);
+            this.metroButtonGroupDelete.Location = new System.Drawing.Point(507, 289);
             this.metroButtonGroupDelete.Name = "metroButtonGroupDelete";
             this.metroButtonGroupDelete.Size = new System.Drawing.Size(239, 33);
             this.metroButtonGroupDelete.TabIndex = 5;
@@ -167,16 +168,16 @@
             // 
             this.metroButtonGroupEdit.Location = new System.Drawing.Point(248, 289);
             this.metroButtonGroupEdit.Name = "metroButtonGroupEdit";
-            this.metroButtonGroupEdit.Size = new System.Drawing.Size(250, 33);
+            this.metroButtonGroupEdit.Size = new System.Drawing.Size(253, 33);
             this.metroButtonGroupEdit.TabIndex = 4;
             this.metroButtonGroupEdit.Text = "Редактировать";
             this.metroButtonGroupEdit.Click += new System.EventHandler(this.metroButtonGroupEdit_Click);
             // 
             // metroButtonGroupAdd
             // 
-            this.metroButtonGroupAdd.Location = new System.Drawing.Point(3, 289);
+            this.metroButtonGroupAdd.Location = new System.Drawing.Point(0, 289);
             this.metroButtonGroupAdd.Name = "metroButtonGroupAdd";
-            this.metroButtonGroupAdd.Size = new System.Drawing.Size(239, 33);
+            this.metroButtonGroupAdd.Size = new System.Drawing.Size(242, 33);
             this.metroButtonGroupAdd.TabIndex = 3;
             this.metroButtonGroupAdd.Text = "Добавить";
             this.metroButtonGroupAdd.Click += new System.EventHandler(this.metroButtonGroupAdd_Click);
@@ -186,9 +187,9 @@
             this.dataGridViewGroup.BackgroundColor = System.Drawing.Color.White;
             this.dataGridViewGroup.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewGroup.GridColor = System.Drawing.Color.White;
-            this.dataGridViewGroup.Location = new System.Drawing.Point(3, 3);
+            this.dataGridViewGroup.Location = new System.Drawing.Point(0, 3);
             this.dataGridViewGroup.Name = "dataGridViewGroup";
-            this.dataGridViewGroup.Size = new System.Drawing.Size(740, 280);
+            this.dataGridViewGroup.Size = new System.Drawing.Size(746, 280);
             this.dataGridViewGroup.TabIndex = 2;
             // 
             // metroTabPage3
@@ -243,11 +244,23 @@
             this.dataGridViewSpecialty.Size = new System.Drawing.Size(740, 280);
             this.dataGridViewSpecialty.TabIndex = 2;
             // 
+            // metroTileRefresh
+            // 
+            this.metroTileRefresh.Location = new System.Drawing.Point(696, 34);
+            this.metroTileRefresh.Name = "metroTileRefresh";
+            this.metroTileRefresh.Size = new System.Drawing.Size(81, 23);
+            this.metroTileRefresh.Style = MetroFramework.MetroColorStyle.Black;
+            this.metroTileRefresh.TabIndex = 1;
+            this.metroTileRefresh.Text = "Обновить";
+            this.metroTileRefresh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.metroTileRefresh.Click += new System.EventHandler(this.metroTileRefresh_Click);
+            // 
             // CollegeForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.metroTileRefresh);
             this.Controls.Add(this.metroTabControl1);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(800, 450);
@@ -288,5 +301,6 @@
         private MetroFramework.Controls.MetroButton metroButtonGraduateAdd;
         private System.Windows.Forms.DataGridView dataGridViewGraduate;
         private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroTile metroTileRefresh;
     }
 }
