@@ -49,6 +49,14 @@
     <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -77,6 +85,12 @@
     </Compile>
     <Compile Include="Entities\ApplicationDbContext.cs" />
     <Compile Include="Entities\Distribution.cs" />
+    <Compile Include="DistributionEntityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DistributionEntityForm.Designer.cs">
+      <DependentUpon>DistributionEntityForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Graduate.cs" />
     <Compile Include="Entities\Organization.cs" />
     <Compile Include="OrganizationEntityForm.cs">
@@ -151,9 +165,16 @@
     <Compile Include="SpecialtyEntityForm.Designer.cs">
       <DependentUpon>SpecialtyEntityForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="VM\DistributionGraduate.cs" />
     <Compile Include="VM\GraduateGroups.cs" />
     <EmbeddedResource Include="CollegeForm.resx">
       <DependentUpon>CollegeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DistributionForm.resx">
+      <DependentUpon>DistributionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DistributionEntityForm.resx">
+      <DependentUpon>DistributionEntityForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GraduateEntityForm.resx">
       <DependentUpon>GraduateEntityForm.cs</DependentUpon>

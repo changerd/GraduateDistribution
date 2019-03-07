@@ -20,7 +20,7 @@ namespace GraduateDistribution
         public bool btnEditvisible = false;
         public int GraduateId;
         public string gsname, gfname, gsecname, ggender, gadress, gtel;
-        public DateTime gbirth;
+        public DateTime gbirth = DateTime.Now.Date;
         public GraduateEntityForm()
         {
             InitializeComponent();

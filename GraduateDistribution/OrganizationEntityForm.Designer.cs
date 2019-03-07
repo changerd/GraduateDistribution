@@ -1,4 +1,4 @@
-﻿namespace GraduateDistribution.Entities
+﻿namespace GraduateDistribution
 {
     partial class OrganizationEntityForm
     {
