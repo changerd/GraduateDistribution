@@ -199,6 +199,9 @@
             this.Controls.Add(this.metroLabel3);
             this.Controls.Add(this.metroLabel2);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(484, 331);
+            this.MinimumSize = new System.Drawing.Size(484, 331);
             this.Name = "DistributionEntityForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "DistributionEntityForm";

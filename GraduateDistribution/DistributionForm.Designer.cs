@@ -490,6 +490,9 @@
             this.Controls.Add(this.dataGridViewDistribution);
             this.Controls.Add(this.metroTextBoxSearch);
             this.Controls.Add(this.metroLabel1);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(1191, 728);
+            this.MinimumSize = new System.Drawing.Size(1191, 728);
             this.Name = "DistributionForm";
             this.Style = MetroFramework.MetroColorStyle.Black;
             this.Text = "Распределение";
